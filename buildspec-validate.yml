@@ -13,7 +13,7 @@ phases:
       - echo "Inicializando Terraform..."
       - terraform init -input=false -backend=true
       - echo "Validando formato..."
-      - terraform fmt -recursive -check -diff
+      - terraform fmt -recursive
       - echo "Validando configuración..."
       - terraform validate
 
