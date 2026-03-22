@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Subiendo archivos web al bucket S3..."
+      - aws s3 sync web/ s3://agv-frontend-bucket --delete
+
+artifacts:
+  files:
+    - '**/*'
